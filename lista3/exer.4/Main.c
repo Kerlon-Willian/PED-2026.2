@@ -2,19 +2,24 @@
 #include <stdlib.h>
 
 int main(){
-    int i2 = 0;
+    int i2, i;
     char vetor[100];
+    char * vetorD;
 
-    printf("digite uma palavra");
-    scanf("%s", vetor); // 'albert\0'
+    printf("digite uma palavra ");
+    scanf("%s", vetor);
     
-    while(vetor[i2] != "\0"){
+    while(vetor[i2] != '\0'){
         i2++;
-    }
+    };
 
-    vetorD = (char *) malloc(i * sizeof(char));
+    vetorD = (char *) malloc(i2 * sizeof(char));
 
-    for (i = 0, i != "\0", i ++){
+    i = 0;
+    while (i != i2){
+        vetorD[i] = vetor[i];
+        i++;
+    };
 
-    }
+    printf("%s e %s", vetorD, vetor);
 }
